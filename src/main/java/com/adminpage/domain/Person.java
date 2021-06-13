@@ -15,6 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @ToString
 @RequiredArgsConstructor
+@EqualsAndHashCode
 public class Person {
 
     @Id
@@ -38,21 +39,5 @@ public class Person {
     private String job;
 
     private String phoneNUmber;
-
-    @Override
-    public boolean equals(Object o) {
-        if(o==null){
-            return false;
-        }
-
-        Person person = (Person)o;
-
-        return person.getName() == name;
-    }
-
-    @Override
-    public int hashCode(){
-        return (name+age).hashCode();
-    }
 
 }
