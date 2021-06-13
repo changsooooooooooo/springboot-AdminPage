@@ -9,13 +9,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@RequiredArgsConstructor
-@EqualsAndHashCode
+@Data
 public class Person {
 
     @Id
@@ -30,6 +26,7 @@ public class Person {
 
     private String hobby;
 
+    @NonNull
     private String bloodType;
 
     private String address;
